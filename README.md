@@ -63,8 +63,8 @@ server {
     }
 }
 ```
-esta funciona para v2ray local y remoto. y ademas para google
-
+###esta funciona para v2ray local y remoto. y ademas para google
+```nginx
 server {
     listen 8080;
     server_name example.com;
@@ -88,3 +88,4 @@ server {
         sub_filter_once off;
     }
 }
+```
