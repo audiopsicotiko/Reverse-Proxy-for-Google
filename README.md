@@ -79,10 +79,10 @@ server {
         #proxy_set_header Host $host;
 
         proxy_set_header User-Agent $http_user_agent;
-        proxy_set_header X-Real-IP 123.123.123.123;
+        proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header Accept-Encoding "";
         proxy_set_header Accept-Language $http_accept_language;
-        proxy_set_header X-Forwarded-For 123.123.123.123;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
 
         sub_filter google.com example.com;
         sub_filter_once off;
