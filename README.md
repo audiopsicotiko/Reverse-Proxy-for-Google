@@ -63,3 +63,28 @@ server {
     }
 }
 ```
+esta funciona para v2ray local y remoto. y ademas para google
+
+server {
+    listen 8080;
+    server_name example.com;
+
+    location /trl3aEyg/ {
+        proxy_pass http://www.pararay.tk;
+        proxy_set_header Host www.parary.tk;
+        proxy_set_header Referer http://www.pararay.tk;
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        #proxy_set_header Host $host;
+
+        proxy_set_header User-Agent $http_user_agent;
+        proxy_set_header X-Real-IP 123.123.123.123;
+        proxy_set_header Accept-Encoding "";
+        proxy_set_header Accept-Language $http_accept_language;
+        proxy_set_header X-Forwarded-For 123.123.123.123;
+
+        sub_filter google.com example.com;
+        sub_filter_once off;
+    }
+}
