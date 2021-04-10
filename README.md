@@ -1,5 +1,7 @@
 # Reverse-Proxy-for-Google
-[Nginx] setup Nginx as a reverse proxy for Google
+[Nginx] configurar Nginx como un proxy inverso para Google
+solo hay que modificar el archivo default de la carpeta sites-available
+nano /etc/nginx/sites-available/default        y pegar lo siguiente:
 
 #### Configuration
 ```nginx
